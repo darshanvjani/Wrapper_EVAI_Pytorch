@@ -62,6 +62,7 @@ class main():
             set_seed(set_seed_no,True)
         if show_summery == True:
             model_summary(self.net,(3,32,32))
+        return net
 
     def train_model(self,optimizer,epoch,lam_reg,schedular,criterian,show_plots=True):
         for epoch in range(epochs):
@@ -71,7 +72,7 @@ class main():
             plot_metrics([self.train_accuracy,self.train_losses,self.test_accuracy,self.test_losses])
             conf_matrix = compute_confusion_matrix(self.net,self.test_dataloader,self.device)
             plot_confusion_matrix(conf_matrix)
-
+        
     def examination(self,no_of_images):
         wrong_pred = wrong_predictions(self.net,self.test_dataloader,no_of_images,self.device,self.classes)
         target_layers = ["layer1","layer2","layer3","layer4"]

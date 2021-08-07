@@ -7,7 +7,7 @@ import cv2
 import torch
 import matplotlib.pyplot as plt
 import numpy as np
-from torch_cv_wrapper.utils import helper
+from Wrapper_EVAI_Pytorch.utils import helper
 
 
 class GradCAM:

@@ -3,22 +3,22 @@ import torchvision
 import torchvision.transforms as transforms
 import albumentations
 import numpy as np
-from __future__ import print_function
+# from __future__ import print_function
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 from torchvision import datasets , transforms 
 import torchvision
 
-from dataloader import albumentation as A 
+from Wrapper_EVAI_Pytorch.dataloader import albumentation as A 
 
-from utils.helper import *
-from utils.gradcam import *
-from utils.plot_metrics import *
-from utils.test import *
-from utils.train import *
+from Wrapper_EVAI_Pytorch.utils.helper import *
+from Wrapper_EVAI_Pytorch.utils.gradcam import *
+from Wrapper_EVAI_Pytorch.utils.plot_metrics import *
+from Wrapper_EVAI_Pytorch.utils.test import *
+from Wrapper_EVAI_Pytorch.utils.train import *
 
-from models import resnet
+from Wrapper_EVAI_Pytorch.models import resnet
 
 
 class main():

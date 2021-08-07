@@ -64,7 +64,7 @@ class main():
             model_summary(self.net,(3,32,32))
         return net
 
-    def train_model(self,optimizer,epoch,lam_reg,schedular,criterian,show_plots=True):
+    def train_model(self,optimizer,epochs,lam_reg,schedular,criterian,show_plots=True):
         for epoch in range(epochs):
             train(self.net,self.device,self.train_dataloader,optimizer,epoch,self.train_accuracy,self.train_losses,lam_reg,schedular,criterian,self.lrs)
             test(self.net,self.device,self.test_dataloader,self.test_accuracy,self.test_losses,criterian)
